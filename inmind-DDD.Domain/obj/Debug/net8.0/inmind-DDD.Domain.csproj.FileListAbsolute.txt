@@ -1,0 +1,15 @@
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\bin\Debug\net8.0\inmind-DDD.Domain.deps.json
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\bin\Debug\net8.0\inmind-DDD.Domain.runtimeconfig.json
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\bin\Debug\net8.0\inmind-DDD.Domain.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\bin\Debug\net8.0\inmind-DDD.Domain.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.csproj.AssemblyReference.cache
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.AssemblyInfoInputs.cache
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.AssemblyInfo.cs
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.sourcelink.json
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\refint\inmind-DDD.Domain.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\inmind-DDD.Domain.genruntimeconfig.cache
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Domain\obj\Debug\net8.0\ref\inmind-DDD.Domain.dll
