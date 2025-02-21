@@ -14,4 +14,20 @@
       <ProjectReference Include="..\inmind-DDD.Persistence\inmind-DDD.Persistence.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.4.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\Courses\Queries\" />
+      <Folder Include="Features\Students\Commands\" />
+      <Folder Include="Features\Students\Queries\" />
+      <Folder Include="Features\Teachers\Commands\" />
+      <Folder Include="Features\Teachers\Queries\" />
+      <Folder Include="Features\TimeSlots\Commands\" />
+      <Folder Include="Features\TimeSlots\Queries\" />
+      <Folder Include="Services\" />
+    </ItemGroup>
+
 </Project>

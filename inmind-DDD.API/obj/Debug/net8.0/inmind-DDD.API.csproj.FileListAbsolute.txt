@@ -148,3 +148,6 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-D
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Common.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Contracts.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Infrastructure.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\MediatR.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

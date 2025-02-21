@@ -1,26 +1,31 @@
+using System.Reflection;
+using inmind_DDD.API.ExceptionHandlers;
 using inmind_DDD.Application.Services;
-using Microsoft.EntityFrameworkCore;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // calling the application services found on the application layer to connect to the dbcontext
+// also calling MediatR there
 builder.Services.AddApplicationServices(builder.Configuration);
+
+// added my own Exception Handler
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// activating the custom exception handler
+app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
 
