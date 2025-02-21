@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
           "Swashbuckle.AspNetCore": "6.6.2",
-          "inmind-DDD.Persistence": "1.0.0"
+          "inmind-DDD.Application": "1.0.0"
         },
         "runtime": {
           "inmind-DDD.API.dll": {}
@@ -697,6 +697,41 @@
         }
       },
       "System.Threading.Channels/7.0.0": {},
+      "inmind-DDD.Application/1.0.0": {
+        "dependencies": {
+          "inmind-DDD.Contracts": "1.0.0",
+          "inmind-DDD.Domain": "1.0.0",
+          "inmind-DDD.Infrastructure": "1.0.0",
+          "inmind-DDD.Persistence": "1.0.0"
+        },
+        "runtime": {
+          "inmind-DDD.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "inmind-DDD.Common/1.0.0": {
+        "runtime": {
+          "inmind-DDD.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "inmind-DDD.Contracts/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.2",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
+          "inmind-DDD.Domain": "1.0.0"
+        },
+        "runtime": {
+          "inmind-DDD.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "inmind-DDD.Domain/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.2",
@@ -709,10 +744,24 @@
           }
         }
       },
+      "inmind-DDD.Infrastructure/1.0.0": {
+        "dependencies": {
+          "inmind-DDD.Common": "1.0.0",
+          "inmind-DDD.Domain": "1.0.0"
+        },
+        "runtime": {
+          "inmind-DDD.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "inmind-DDD.Persistence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
+          "inmind-DDD.Common": "1.0.0",
+          "inmind-DDD.Contracts": "1.0.0",
           "inmind-DDD.Domain": "1.0.0"
         },
         "runtime": {
@@ -1073,7 +1122,27 @@
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
+    "inmind-DDD.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "inmind-DDD.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "inmind-DDD.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "inmind-DDD.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "inmind-DDD.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

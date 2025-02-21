@@ -140,3 +140,11 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\tr\Micro
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Application.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Common.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Contracts.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Infrastructure.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Application.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Common.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Contracts.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.Infrastructure.pdb

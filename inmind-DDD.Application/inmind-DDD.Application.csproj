@@ -7,4 +7,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\inmind-DDD.Contracts\inmind-DDD.Contracts.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Domain\inmind-DDD.Domain.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Infrastructure\inmind-DDD.Infrastructure.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Persistence\inmind-DDD.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>

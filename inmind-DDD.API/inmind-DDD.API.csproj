@@ -18,11 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\inmind-DDD.Persistence\inmind-DDD.Persistence.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
+      <ProjectReference Include="..\inmind-DDD.Application\inmind-DDD.Application.csproj" />
     </ItemGroup>
 
 </Project>

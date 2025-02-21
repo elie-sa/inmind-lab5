@@ -7,4 +7,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\inmind-DDD.Common\inmind-DDD.Common.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Domain\inmind-DDD.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

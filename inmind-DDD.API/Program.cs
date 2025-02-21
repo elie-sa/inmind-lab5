@@ -1,4 +1,4 @@
-using inmind_DDD.Persistence;
+using inmind_DDD.Application.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+// calling the application services found on the application layer to connect to the dbcontext
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 
