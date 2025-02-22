@@ -1,5 +1,5 @@
+using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Domain.Models;
-using inmind_DDD.Persistence;
 using MediatR;
 
 namespace inmind_DDD.Application.Features.TimeSlots.Commands;
@@ -7,9 +7,9 @@ namespace inmind_DDD.Application.Features.TimeSlots.Commands;
 
 public class CreateTimeSlotCommandHandler : IRequestHandler<CreateTimeSlotCommand, int>
 {
-    private readonly AppDbContext _context;
+    private readonly IAppDbContext _context;
 
-    public CreateTimeSlotCommandHandler(AppDbContext context)
+    public CreateTimeSlotCommandHandler(IAppDbContext context)
     {
         _context = context;
     }

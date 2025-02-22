@@ -25,7 +25,7 @@ public class CourseController : ControllerBase
 
     [HttpPut]
     [Route("updateMaxCapacity")]
-    public async Task<ActionResult<int>> UpdateMaxCapacity([FromBody] UpdateCourseCommand command)
+    public async Task<ActionResult<int>> UpdateMaxCapacity([FromBody] UpdateMaxStudentsCommand command)
     {
         await _mediator.Send(command);
         return Ok("Max capacity updated.");

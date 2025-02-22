@@ -4,16 +4,16 @@ using MediatR;
 
 namespace inmind_DDD.Application.Features.Courses.Commands;
 
-public class UpdateCourseCommandHandler: IRequestHandler<UpdateCourseCommand, bool>
+public class UpdateMaxStudentsCommandHandler: IRequestHandler<UpdateMaxStudentsCommand, bool>
 {
     private readonly IAppDbContext _context;
 
-    public UpdateCourseCommandHandler(IAppDbContext context)
+    public UpdateMaxStudentsCommandHandler(IAppDbContext context)
     {
         _context = context;
     }
 
-    public async Task<bool> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(UpdateMaxStudentsCommand request, CancellationToken cancellationToken)
     {
         if (request.MaxStudents <= 0)
         {

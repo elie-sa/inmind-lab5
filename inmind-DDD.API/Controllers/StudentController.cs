@@ -21,5 +21,13 @@ public class StudentController: ControllerBase
     {
         var studentId = await _mediator.Send(command);
         return Ok(studentId);
-    }    
+    }
+
+    [HttpPut]
+    [Route("enrollInCourse")]
+    public async Task<ActionResult<int>> EnrollStudent([FromBody] EnrollStudentCommand command)
+    {
+        await _mediator.Send(command);
+        return Ok("Student successfully enrolled.");
+    }
 }

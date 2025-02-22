@@ -1,14 +1,14 @@
 using inmind_DDD.Application.Services.Features.Teachers.Commands;
-using inmind_DDD.Persistence;
+using inmind_DDD.Contracts.Interfaces;
 using MediatR;
 
 namespace inmind_DDD.Application.Features.Teachers.Commands;
 
 public class GradeStudentCommandHandler: IRequestHandler<GradeStudentCommand, double>
 {
-    private readonly AppDbContext _context;
+    private readonly IAppDbContext _context;
 
-    public GradeStudentCommandHandler(AppDbContext context)
+    public GradeStudentCommandHandler(IAppDbContext context)
     {
         _context = context;
     }
@@ -21,12 +21,13 @@ public class GradeStudentCommandHandler: IRequestHandler<GradeStudentCommand, do
             throw new ArgumentException($"Student with id {request.StudentId} does not exist.");
         }
 
-        if (request.Grade <= 0)
+        if (request.Grade <= 0 || request.Grade > 20)
         {
             throw new ArgumentException($"Grade {request.Grade} is invalid.");
         }
         
         student.GradeAverage = request.Grade;
+        student.CanApplyToFrance = request.Grade >= 15? true : false;
         await _context.SaveChangesAsync(cancellationToken);
 
         return student.GradeAverage;

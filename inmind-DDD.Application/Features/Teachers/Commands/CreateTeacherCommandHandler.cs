@@ -1,14 +1,14 @@
+using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Domain.Models;
-using inmind_DDD.Persistence;
 using MediatR;
 
 namespace inmind_DDD.Application.Features.Teachers.Commands;
 
 public class CreateTeacherCommandHandler: IRequestHandler<CreateTeacherCommand, int>
 {
-    private readonly AppDbContext _context;
+    private readonly IAppDbContext _context;
 
-    public CreateTeacherCommandHandler(AppDbContext context)
+    public CreateTeacherCommandHandler(IAppDbContext context)
     {
         _context = context;
     }
