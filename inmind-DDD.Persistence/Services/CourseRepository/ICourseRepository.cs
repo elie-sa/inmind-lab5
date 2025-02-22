@@ -1,6 +1,6 @@
 using inmind_DDD.Domain.Models;
 
-namespace inmind_DDD.Persistence.Services;
+namespace inmind_DDD.Persistence.Services.CourseRepository;
 
 public interface ICourseRepository
 {

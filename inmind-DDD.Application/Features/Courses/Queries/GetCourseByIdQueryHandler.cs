@@ -2,6 +2,7 @@ using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Domain.Models;
 using inmind_DDD.Persistence;
 using inmind_DDD.Persistence.Services;
+using inmind_DDD.Persistence.Services.CourseRepository;
 using MediatR;
 
 namespace inmind_DDD.Application.Features.Courses.Queries;

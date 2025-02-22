@@ -1,10 +1,9 @@
-using System.Text.Json;
 using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace inmind_DDD.Persistence.Services;
+namespace inmind_DDD.Persistence.Services.CourseRepository;
 
 public class CourseRepository : BaseCacheRepository<Course>, ICourseRepository
 {

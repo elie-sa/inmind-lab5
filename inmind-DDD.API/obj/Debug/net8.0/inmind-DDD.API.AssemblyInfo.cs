@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("inmind-DDD.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd1a0601f46b307b163fdfe71347c6582cbc8bff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5085d07d53141a7ebcebba7c6cc3db24166ae6d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("inmind-DDD.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("inmind-DDD.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
