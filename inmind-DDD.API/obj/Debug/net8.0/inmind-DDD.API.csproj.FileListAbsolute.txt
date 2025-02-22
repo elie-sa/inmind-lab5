@@ -161,3 +161,4 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Pipeline
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.AspNetCore.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.Core.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
@@ -16,6 +18,18 @@ public static class InfrastructureServiceRegistration
         {
             options.Configuration = redisConnectionString;
             options.InstanceName = "RedisCacheInstance";
+        });
+        
+        services.AddApiVersioning(options =>
+        {
+            // setting the default version if not specified (i will not specify a version for most)
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+
+            options.ApiVersionReader = new HeaderApiVersionReader("X-API-Version");
+
+            // lets us see the available api versions
+            options.ReportApiVersions = true;
         });
     }
 }

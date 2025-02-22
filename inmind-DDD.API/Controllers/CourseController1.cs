@@ -7,13 +7,16 @@ using Microsoft.AspNetCore.OData.Query;
 
 namespace inmind_DDD.API.Controllers;
 
+
+
 [ApiController]
-[Route("courses")]
-public class CourseController : ControllerBase
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/courses")]
+public class CourseController1 : ControllerBase
 {
     private readonly IMediator _mediator;
 
-    public CourseController(IMediator mediator)
+    public CourseController1(IMediator mediator)
     {
         _mediator = mediator;
     }

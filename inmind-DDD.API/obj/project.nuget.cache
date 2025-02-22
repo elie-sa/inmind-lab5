@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RG1WsZLD6PA=",
+  "dgSpecHash": "oX9ez/f5bcg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.API\\inmind-DDD.API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Esawm\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.aspnetcore.odata\\9.2.0\\microsoft.aspnetcore.odata.9.2.0.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w6ZdO/OwfCA=",
+  "dgSpecHash": "WnsdRTRKahU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Infrastructure\\inmind-DDD.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.2\\microsoft.entityframeworkcore.9.0.2.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.2\\microsoft.entityframeworkcore.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\Esawm\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.2\\microsoft.entityframeworkcore.analyzers.9.0.2.nupkg.sha512",
