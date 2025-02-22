@@ -4,6 +4,7 @@ using inmind_DDD.Application.Services.Features.Teachers.Commands;
 using inmind_DDD.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace inmind_DDD.API.Controllers;
 
@@ -16,6 +17,14 @@ public class TeacherController : ControllerBase
     public TeacherController(IMediator mediator)
     {
         _mediator = mediator;
+    }
+    
+    [HttpGet]
+    [EnableQuery]
+    public async Task<ActionResult<IQueryable<Teacher>>> Get()
+    {
+        var result = await _mediator.Send(new GetTeachersQuery());
+        return Ok(result);
     }
 
     [HttpGet("{id}")]

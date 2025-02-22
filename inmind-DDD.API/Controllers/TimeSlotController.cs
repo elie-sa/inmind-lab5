@@ -3,6 +3,7 @@ using inmind_DDD.Application.Features.TimeSlots.Queries;
 using inmind_DDD.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 [ApiController]
 [Route("timeslots")]
@@ -24,6 +25,14 @@ public class TimeSlotController : ControllerBase
     
     example of json request (swagger doesn't document startTime and endTime correctly)
      */
+    
+    [HttpGet]
+    [EnableQuery]
+    public async Task<ActionResult<IQueryable<TimeSlot>>> Get()
+    {
+        var result = await _mediator.Send(new GetTimeSlotsQuery());
+        return Ok(result);
+    }
     
     [HttpGet("{id}")]
     public async Task<ActionResult<TimeSlot>> GetTimeSlotById(int id)
