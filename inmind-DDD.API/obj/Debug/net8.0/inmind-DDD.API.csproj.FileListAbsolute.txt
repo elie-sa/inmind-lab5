@@ -156,3 +156,8 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsof
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.OData.Edm.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.OData.ModelBuilder.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.Spatial.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.AspNetCore.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.Core.dll

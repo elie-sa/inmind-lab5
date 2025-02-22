@@ -11,4 +11,5 @@ public interface IAppDbContext
     DbSet<TimeSlot> TimeSlots { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+    DbSet<T> Set<T>() where T : class;
 }

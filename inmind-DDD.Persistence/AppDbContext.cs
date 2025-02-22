@@ -34,6 +34,11 @@ public class AppDbContext : DbContext, IAppDbContext
     {
         return await base.SaveChangesAsync(cancellationToken);
     }
+    
+    public new DbSet<T> Set<T>() where T : class
+    {
+        return base.Set<T>();
+    }
 }
 
 
