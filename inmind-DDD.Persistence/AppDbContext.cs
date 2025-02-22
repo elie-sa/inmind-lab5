@@ -18,14 +18,16 @@ public class AppDbContext : DbContext, IAppDbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<Course>()
-            .HasMany(c => c.Students)
-            .WithMany(s => s.Courses)
-            .UsingEntity(j => j.ToTable("StudentCourses"));
+            .HasOne(c => c.Teacher)
+            .WithMany(t => t.Courses)
+            .HasForeignKey(c => c.TeacherId)
+            .OnDelete(DeleteBehavior.SetNull);
 
         modelBuilder.Entity<Course>()
-            .HasMany(c => c.Teachers)
-            .WithMany(t => t.Courses)
-            .UsingEntity(j => j.ToTable("TeacherCourses"));
+            .HasOne(c => c.TimeSlot)
+            .WithOne(ts => ts.Course)
+            .HasForeignKey<Course>(c => c.TimeSlotId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
     
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -33,5 +35,6 @@ public class AppDbContext : DbContext, IAppDbContext
         return await base.SaveChangesAsync(cancellationToken);
     }
 }
+
 
 

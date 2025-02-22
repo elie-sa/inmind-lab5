@@ -16,6 +16,7 @@ public class CourseController : ControllerBase
     }
     
     [HttpPost]
+    [Route("create")]
     public async Task<ActionResult<int>> CreateCourse([FromBody] CreateCourseCommand command)
     {
         var courseId = await _mediator.Send(command);

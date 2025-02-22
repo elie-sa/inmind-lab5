@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inmind-DDD.Persistence", "i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inmind-DDD.API", "inmind-DDD.API\inmind-DDD.API.csproj", "{D1D1F01C-D165-4F72-8C72-7300B7EE6623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inmind-DDD.Contracts", "inmind-DDD.Contracts\inmind-DDD.Contracts.csproj", "{A35C875C-010F-4893-A9B9-231D60CEF1D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inmind-DDD.Contract", "inmind-DDD.Contract\inmind-DDD.Contract.csproj", "{A35C875C-010F-4893-A9B9-231D60CEF1D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

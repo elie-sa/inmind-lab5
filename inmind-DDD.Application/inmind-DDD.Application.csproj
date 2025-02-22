@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\inmind-DDD.Contracts\inmind-DDD.Contracts.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Contract\inmind-DDD.Contract.csproj" />
       <ProjectReference Include="..\inmind-DDD.Domain\inmind-DDD.Domain.csproj" />
       <ProjectReference Include="..\inmind-DDD.Infrastructure\inmind-DDD.Infrastructure.csproj" />
       <ProjectReference Include="..\inmind-DDD.Persistence\inmind-DDD.Persistence.csproj" />
@@ -21,11 +21,8 @@
 
     <ItemGroup>
       <Folder Include="Features\Courses\Queries\" />
-      <Folder Include="Features\Students\Commands\" />
       <Folder Include="Features\Students\Queries\" />
-      <Folder Include="Features\Teachers\Commands\" />
       <Folder Include="Features\Teachers\Queries\" />
-      <Folder Include="Features\TimeSlots\Commands\" />
       <Folder Include="Features\TimeSlots\Queries\" />
       <Folder Include="Services\" />
     </ItemGroup>

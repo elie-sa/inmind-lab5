@@ -18,7 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\inmind-DDD.Common\inmind-DDD.Common.csproj" />
-      <ProjectReference Include="..\inmind-DDD.Contracts\inmind-DDD.Contracts.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Contract\inmind-DDD.Contract.csproj" />
       <ProjectReference Include="..\inmind-DDD.Domain\inmind-DDD.Domain.csproj" />
     </ItemGroup>
 

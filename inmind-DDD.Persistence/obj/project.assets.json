@@ -976,7 +976,7 @@
           "bin/placeholder/inmind-DDD.Common.dll": {}
         }
       },
-      "inmind-DDD.Contracts/1.0.0": {
+      "inmind-DDD.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -985,10 +985,10 @@
           "inmind-DDD.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/inmind-DDD.Contracts.dll": {}
+          "bin/placeholder/inmind-DDD.Contract.dll": {}
         },
         "runtime": {
-          "bin/placeholder/inmind-DDD.Contracts.dll": {}
+          "bin/placeholder/inmind-DDD.Contract.dll": {}
         }
       },
       "inmind-DDD.Domain/1.0.0": {
@@ -2937,10 +2937,10 @@
       "path": "../inmind-DDD.Common/inmind-DDD.Common.csproj",
       "msbuildProject": "../inmind-DDD.Common/inmind-DDD.Common.csproj"
     },
-    "inmind-DDD.Contracts/1.0.0": {
+    "inmind-DDD.Contract/1.0.0": {
       "type": "project",
-      "path": "../inmind-DDD.Contracts/inmind-DDD.Contracts.csproj",
-      "msbuildProject": "../inmind-DDD.Contracts/inmind-DDD.Contracts.csproj"
+      "path": "../inmind-DDD.Contract/inmind-DDD.Contract.csproj",
+      "msbuildProject": "../inmind-DDD.Contract/inmind-DDD.Contract.csproj"
     },
     "inmind-DDD.Domain/1.0.0": {
       "type": "project",
@@ -2954,7 +2954,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.2",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.3",
       "inmind-DDD.Common >= 1.0.0",
-      "inmind-DDD.Contracts >= 1.0.0",
+      "inmind-DDD.Contract >= 1.0.0",
       "inmind-DDD.Domain >= 1.0.0"
     ]
   },
@@ -2993,8 +2993,8 @@
             "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj": {
               "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj"
             },
-            "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contracts\\inmind-DDD.Contracts.csproj": {
-              "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contracts\\inmind-DDD.Contracts.csproj"
+            "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj": {
+              "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj"
             },
             "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj": {
               "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj"

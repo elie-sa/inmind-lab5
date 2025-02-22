@@ -34,22 +34,7 @@ namespace inmind_DDD.Persistence.Migrations
 
                     b.HasIndex("StudentsId");
 
-                    b.ToTable("StudentCourses", (string)null);
-                });
-
-            modelBuilder.Entity("CourseTeacher", b =>
-                {
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("TeachersId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("CoursesId", "TeachersId");
-
-                    b.HasIndex("TeachersId");
-
-                    b.ToTable("TeacherCourses", (string)null);
+                    b.ToTable("CourseStudent");
                 });
 
             modelBuilder.Entity("inmind_DDD.Domain.Models.Course", b =>
@@ -73,7 +58,18 @@ namespace inmind_DDD.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("TeacherId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("TimeSlotId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
+
+                    b.HasIndex("TimeSlotId")
+                        .IsUnique();
 
                     b.ToTable("Courses");
                 });
@@ -113,12 +109,7 @@ namespace inmind_DDD.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("TimeSlotId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TimeSlotId");
 
                     b.ToTable("Teachers");
                 });
@@ -137,7 +128,12 @@ namespace inmind_DDD.Persistence.Migrations
                     b.Property<TimeSpan>("StartTime")
                         .HasColumnType("interval");
 
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("TimeSlots");
                 });
@@ -157,30 +153,44 @@ namespace inmind_DDD.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CourseTeacher", b =>
+            modelBuilder.Entity("inmind_DDD.Domain.Models.Course", b =>
                 {
-                    b.HasOne("inmind_DDD.Domain.Models.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
+                    b.HasOne("inmind_DDD.Domain.Models.Teacher", "Teacher")
+                        .WithMany("Courses")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("inmind_DDD.Domain.Models.TimeSlot", "TimeSlot")
+                        .WithOne("Course")
+                        .HasForeignKey("inmind_DDD.Domain.Models.Course", "TimeSlotId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Teacher");
+
+                    b.Navigation("TimeSlot");
+                });
+
+            modelBuilder.Entity("inmind_DDD.Domain.Models.TimeSlot", b =>
+                {
+                    b.HasOne("inmind_DDD.Domain.Models.Teacher", "Teacher")
+                        .WithMany("TimeSlots")
+                        .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("inmind_DDD.Domain.Models.Teacher", null)
-                        .WithMany()
-                        .HasForeignKey("TeachersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("inmind_DDD.Domain.Models.Teacher", b =>
                 {
-                    b.HasOne("inmind_DDD.Domain.Models.TimeSlot", "TimeSlot")
-                        .WithMany()
-                        .HasForeignKey("TimeSlotId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Courses");
 
-                    b.Navigation("TimeSlot");
+                    b.Navigation("TimeSlots");
+                });
+
+            modelBuilder.Entity("inmind_DDD.Domain.Models.TimeSlot", b =>
+                {
+                    b.Navigation("Course");
                 });
 #pragma warning restore 612, 618
         }
