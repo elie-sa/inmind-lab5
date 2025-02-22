@@ -52,4 +52,19 @@ public class TeacherController : ControllerBase
         var output = await _mediator.Send(command);
         return Ok(new { newGrade = output});
     }
+    
+    [HttpPost]
+    [Route("{teacherId}/uploadProfilePicture")]
+    public async Task<IActionResult> UploadProfilePicture(int teacherId, IFormFile file)
+    {
+        
+        var command = new UploadProfilePictureCommand
+        {
+            TeacherId = teacherId,
+            File = file
+        };
+
+        await _mediator.Send(command);
+        return Ok("Profile picture uploaded successfully");
+    }
 }

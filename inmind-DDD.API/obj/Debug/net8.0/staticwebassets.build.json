@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "2V+S5/5FfPD2tZOk8gtIJh3Ghi1DIn6/Huo+OcnGfXo=",
+  "Hash": "dPT/Fyyv1HActEaFuYKITnXhASXyAr3lAGRbKp4oZbg=",
   "Source": "inmind-DDD.API",
   "BasePath": "_content/inmind-DDD.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "inmind-DDD.API\\wwwroot",
+      "Source": "inmind-DDD.API",
+      "ContentRoot": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.API\\wwwroot\\",
+      "BasePath": "_content/inmind-DDD.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

@@ -162,3 +162,4 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExc
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.AspNetCore.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\StackExchange.Redis.Extensions.Core.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\bin\Debug\net8.0\inmind-DDD.API.staticwebassets.runtime.json

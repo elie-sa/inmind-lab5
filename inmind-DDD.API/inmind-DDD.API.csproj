@@ -24,4 +24,8 @@
       <ProjectReference Include="..\inmind-DDD.Application\inmind-DDD.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
 </Project>
