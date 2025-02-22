@@ -735,7 +735,7 @@
         "dependencies": {
           "MediatR": "12.4.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
-          "inmind-DDD.Contracts": "1.0.0",
+          "inmind-DDD.Contract": "1.0.0",
           "inmind-DDD.Domain": "1.0.0",
           "inmind-DDD.Infrastructure": "1.0.0",
           "inmind-DDD.Persistence": "1.0.0"
@@ -755,14 +755,14 @@
           }
         }
       },
-      "inmind-DDD.Contracts/1.0.0": {
+      "inmind-DDD.Contract/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
           "inmind-DDD.Domain": "1.0.0"
         },
         "runtime": {
-          "inmind-DDD.Contracts.dll": {
+          "inmind-DDD.Contract.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -797,7 +797,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
           "inmind-DDD.Common": "1.0.0",
-          "inmind-DDD.Contracts": "1.0.0",
+          "inmind-DDD.Contract": "1.0.0",
           "inmind-DDD.Domain": "1.0.0"
         },
         "runtime": {
@@ -1189,7 +1189,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "inmind-DDD.Contracts/1.0.0": {
+    "inmind-DDD.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -5,11 +5,11 @@ using MediatR;
 namespace inmind_DDD.Application.Features.Courses.Commands;
 
 
-public class CreateCourseHandler : IRequestHandler<CreateCourseCommand, int>
+public class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, int>
 {
     private readonly IAppDbContext _context;
 
-    public CreateCourseHandler(IAppDbContext context)
+    public CreateCourseCommandHandler(IAppDbContext context)
     {
         _context = context;
     }

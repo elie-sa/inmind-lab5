@@ -22,5 +22,13 @@ public class CourseController : ControllerBase
         var courseId = await _mediator.Send(command);
         return Ok(courseId);
     }
+
+    [HttpPut]
+    [Route("updateMaxCapacity")]
+    public async Task<ActionResult<int>> UpdateMaxCapacity([FromBody] UpdateCourseCommand command)
+    {
+        await _mediator.Send(command);
+        return Ok("Max capacity updated.");
+    }
     
 }

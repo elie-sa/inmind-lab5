@@ -5,11 +5,11 @@ using MediatR;
 
 namespace inmind_DDD.Application.Features.Students.Commands;
 
-public class CreateStudentHandler : IRequestHandler<CreateStudentCommand, int>
+public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, int>
 {
     private readonly AppDbContext _context;
 
-    public CreateStudentHandler(AppDbContext context)
+    public CreateStudentCommandHandler(AppDbContext context)
     {
         _context = context;
     }

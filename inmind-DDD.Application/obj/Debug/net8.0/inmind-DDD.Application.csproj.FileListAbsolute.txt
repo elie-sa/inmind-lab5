@@ -2,11 +2,9 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Application.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Application.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Common.dll
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Contracts.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Domain.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Infrastructure.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Persistence.dll
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Contracts.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Domain.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Infrastructure.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Persistence.pdb
@@ -22,3 +20,5 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\obj\Debug\net8.0\
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\obj\Debug\net8.0\refint\inmind-DDD.Application.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\obj\Debug\net8.0\inmind-DDD.Application.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\obj\Debug\net8.0\ref\inmind-DDD.Application.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Contract.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\bin\Debug\net8.0\inmind-DDD.Contract.pdb
