@@ -20,10 +20,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Courses\Queries\" />
-      <Folder Include="Features\Students\Queries\" />
-      <Folder Include="Features\Teachers\Queries\" />
-      <Folder Include="Features\TimeSlots\Queries\" />
       <Folder Include="Services\" />
     </ItemGroup>
 

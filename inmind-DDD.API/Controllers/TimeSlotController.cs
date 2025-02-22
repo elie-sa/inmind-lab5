@@ -1,4 +1,6 @@
 using inmind_DDD.Application.Features.TimeSlots.Commands;
+using inmind_DDD.Application.Features.TimeSlots.Queries;
+using inmind_DDD.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +24,13 @@ public class TimeSlotController : ControllerBase
     
     example of json request (swagger doesn't document startTime and endTime correctly)
      */
-     
+    
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TimeSlot>> GetTimeSlotById(int id)
+    {
+        var timeSlot = await _mediator.Send(new GetTimeSlotByIdQuery(id));
+        return Ok(timeSlot);
+    }
     
     [HttpPost]
     [Route("create")]

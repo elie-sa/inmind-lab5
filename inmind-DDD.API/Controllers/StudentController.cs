@@ -1,4 +1,6 @@
 using inmind_DDD.Application.Features.Students.Commands;
+using inmind_DDD.Application.Features.Students.Queries;
+using inmind_DDD.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +15,13 @@ public class StudentController: ControllerBase
     public StudentController(IMediator mediator)
     {
         _mediator = mediator;
+    }
+    
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Student>> GetStudentById(int id)
+    {
+        var student = await _mediator.Send(new GetStudentByIdQuery(id));
+        return Ok(student);
     }
     
     [HttpPost]

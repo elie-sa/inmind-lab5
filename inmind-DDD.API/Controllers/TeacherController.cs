@@ -1,7 +1,11 @@
 using inmind_DDD.Application.Features.Teachers.Commands;
+using inmind_DDD.Application.Features.Teachers.Queries;
 using inmind_DDD.Application.Services.Features.Teachers.Commands;
+using inmind_DDD.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+
+namespace inmind_DDD.API.Controllers;
 
 [ApiController]
 [Route("teachers")]
@@ -14,6 +18,13 @@ public class TeacherController : ControllerBase
         _mediator = mediator;
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Teacher>> GetTeacherById(int id)
+    {
+        var teacher = await _mediator.Send(new GetTeacherByIdQuery(id));
+        return Ok(teacher);
+    }
+    
     [HttpPost]
     [Route("create")]
     public async Task<IActionResult> CreateTeacher([FromBody] CreateTeacherCommand command)
