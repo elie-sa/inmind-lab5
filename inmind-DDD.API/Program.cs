@@ -1,11 +1,14 @@
 using System.Reflection;
 using inmind_DDD.API.ExceptionHandlers;
+using inmind_DDD.Application;
 using inmind_DDD.Application.Services;
 using MediatR;
+using Microsoft.AspNetCore.OData;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddOData(opt => opt.Select().Filter().OrderBy().Expand().Count());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
