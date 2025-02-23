@@ -7,4 +7,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\inmind-DDD.Contract\inmind-DDD.Contract.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Domain\inmind-DDD.Domain.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Infrastructure\inmind-DDD.Infrastructure.csproj" />
+      <ProjectReference Include="..\inmind-DDD.Persistence\inmind-DDD.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="MediatR" Version="12.4.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    </ItemGroup>
+
 </Project>

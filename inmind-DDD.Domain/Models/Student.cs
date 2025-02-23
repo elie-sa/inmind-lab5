@@ -7,4 +7,5 @@ public class Student
     public double GradeAverage { get; set; }
     public bool CanApplyToFrance { get; set; }
     public List<Course> Courses { get; set; }
+    public int TotalNumberOfGrades { get; set; }
 }

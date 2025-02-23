@@ -8,5 +8,10 @@ public class Course
     public DateTime EnrollmentStart { get; set; }
     public DateTime EnrollmentEnd { get; set; }
     public List<Student> Students { get; set; }
-    public List<Teacher> Teachers { get; set; }
+    
+    public int? TeacherId { get; set; } 
+    public Teacher? Teacher { get; set; }
+
+    public int? TimeSlotId { get; set; }
+    public TimeSlot? TimeSlot { get; set; }
 }

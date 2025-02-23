@@ -1,26 +1,34 @@
-using inmind_DDD.Persistence;
-using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using inmind_DDD.API.ExceptionHandlers;
+using inmind_DDD.Application;
+using inmind_DDD.Application.Services;
+using MediatR;
+using Microsoft.AspNetCore.OData;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers()
+    .AddOData(opt => opt.Select().Filter().OrderBy().Expand().Count());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+// calling the application services found on the application layer to connect to the dbcontext
+// also calling MediatR there
+builder.Services.AddApplicationServices(builder.Configuration);
+
+// added my own Exception Handler
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// activating the custom exception handler
+app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
 

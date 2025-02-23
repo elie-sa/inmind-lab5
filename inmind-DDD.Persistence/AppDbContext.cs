@@ -1,9 +1,10 @@
+using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace inmind_DDD.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IAppDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -17,24 +18,28 @@ public class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<Course>()
-            .HasMany(c => c.Students)
-            .WithMany(s => s.Courses)
-            .UsingEntity(j => j.ToTable("StudentCourses"));
+            .HasOne(c => c.Teacher)
+            .WithMany(t => t.Courses)
+            .HasForeignKey(c => c.TeacherId)
+            .OnDelete(DeleteBehavior.SetNull);
 
         modelBuilder.Entity<Course>()
-            .HasMany(c => c.Teachers)
-            .WithMany(t => t.Courses)
-            .UsingEntity(j => j.ToTable("TeacherCourses"));
+            .HasOne(c => c.TimeSlot)
+            .WithOne(ts => ts.Course)
+            .HasForeignKey<Course>(c => c.TimeSlotId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
     
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=UniDB;Username=postgres;Password=admin",
-                b => b.MigrationsAssembly("Infrastructure.Persistence"));
-        }
+        return await base.SaveChangesAsync(cancellationToken);
+    }
+    
+    public new DbSet<T> Set<T>() where T : class
+    {
+        return base.Set<T>();
     }
 }
+
 
 
