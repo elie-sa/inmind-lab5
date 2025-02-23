@@ -46,6 +46,6 @@ public class TimeSlotController : ControllerBase
     public async Task<IActionResult> CreateTimeSlot([FromBody] CreateTimeSlotCommand command)
     {
         var timeSlotId = await _mediator.Send(command);
-        return Ok(timeSlotId);
+        return CreatedAtAction(nameof(GetTimeSlotById), new { id = timeSlotId }, timeSlotId);
     }
 }

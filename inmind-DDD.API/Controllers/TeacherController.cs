@@ -39,7 +39,7 @@ public class TeacherController : ControllerBase
     public async Task<IActionResult> CreateTeacher([FromBody] CreateTeacherCommand command)
     {
         var teacherId = await _mediator.Send(command);
-        return Ok(teacherId);
+        return CreatedAtAction(nameof(GetTeacherById), new { id = teacherId }, teacherId);
     }
     
     // to make the database simpler i had no connection between teacher and each student grade
@@ -65,6 +65,6 @@ public class TeacherController : ControllerBase
         };
 
         await _mediator.Send(command);
-        return Ok("Profile picture uploaded successfully");
+        return NoContent();
     }
 }

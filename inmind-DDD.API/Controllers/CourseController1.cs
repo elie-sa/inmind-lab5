@@ -41,7 +41,7 @@ public class CourseController1 : ControllerBase
     public async Task<ActionResult<int>> CreateCourse([FromBody] CreateCourseCommand command)
     {
         var courseId = await _mediator.Send(command);
-        return Ok(courseId);
+        return CreatedAtAction(nameof(GetCourseById), new { id = courseId }, courseId);
     }
 
     [HttpPut]
@@ -49,7 +49,7 @@ public class CourseController1 : ControllerBase
     public async Task<ActionResult<bool>> UpdateMaxCapacity([FromBody] UpdateMaxStudentsCommand command)
     {
         await _mediator.Send(command);
-        return Ok("Max capacity updated.");
+        return NoContent();
     }
 
     [HttpPut]
@@ -57,6 +57,6 @@ public class CourseController1 : ControllerBase
     public async Task<ActionResult<bool>> UpdateTimeSlot([FromBody] AssignToSlotCommand command)
     {
         await _mediator.Send(command);
-        return Ok("Time slot updated.");
+        return NoContent();
     } 
 }

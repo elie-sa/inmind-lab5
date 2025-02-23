@@ -38,7 +38,7 @@ public class StudentController: ControllerBase
     public async Task<ActionResult<int>> CreateStudent([FromBody] CreateStudentCommand command)
     {
         var studentId = await _mediator.Send(command);
-        return Ok(studentId);
+        return CreatedAtAction(nameof(GetStudentById), new { id = studentId }, studentId);
     }
 
     [HttpPut]
@@ -46,6 +46,6 @@ public class StudentController: ControllerBase
     public async Task<ActionResult<int>> EnrollStudent([FromBody] EnrollStudentCommand command)
     {
         await _mediator.Send(command);
-        return Ok("Student successfully enrolled.");
+        return NoContent();
     }
 }
