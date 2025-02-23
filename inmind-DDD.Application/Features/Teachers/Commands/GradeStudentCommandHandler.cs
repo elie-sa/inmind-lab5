@@ -25,8 +25,18 @@ public class GradeStudentCommandHandler: IRequestHandler<GradeStudentCommand, do
         {
             throw new ArgumentException($"Grade {request.Grade} is invalid.");
         }
+
+        if (student.TotalNumberOfGrades == 0)
+        {
+            student.TotalNumberOfGrades = 1;
+            student.GradeAverage = request.Grade;
+        }
+        else
+        {
+            student.GradeAverage = ((student.GradeAverage*student.TotalNumberOfGrades)+request.Grade)/(student.TotalNumberOfGrades+1);
+            student.TotalNumberOfGrades++;
+        }
         
-        student.GradeAverage = request.Grade;
         student.CanApplyToFrance = request.Grade >= 15? true : false;
         await _context.SaveChangesAsync(cancellationToken);
 
