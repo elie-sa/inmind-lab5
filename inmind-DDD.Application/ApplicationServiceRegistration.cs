@@ -17,5 +17,8 @@ public static class ApplicationServiceRegistration
         
         // connection to the DbContext found here (found in the persistence layer)
         services.AddPersistenceServices(configuration);
+        
+        services.AddAutoMapper(typeof(MappingProfile));
+
     }
 }
