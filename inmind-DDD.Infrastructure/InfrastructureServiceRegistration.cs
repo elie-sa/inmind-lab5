@@ -1,7 +1,10 @@
+using inmind_DDD.Infrastructure.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using StackExchange.Redis;
 
 namespace inmind_DDD.Infrastructure;
@@ -34,5 +37,16 @@ public static class InfrastructureServiceRegistration
         
         //adding local caching
         services.AddMemoryCache();
+        
+        Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(configuration)
+            .Enrich.FromLogContext()
+            .CreateLogger();
+
+        services.AddLogging(loggingBuilder =>
+        {
+            loggingBuilder.AddSerilog(dispose: true);
+        });
+
     }
 }

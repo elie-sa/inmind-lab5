@@ -215,6 +215,22 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1-dev-02317, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.1-dev-00953, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "StackExchange.Redis.Extensions.AspNetCore": {
               "target": "Package",
               "version": "[11.0.0, )"

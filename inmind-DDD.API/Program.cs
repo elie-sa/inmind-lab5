@@ -32,6 +32,8 @@ app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
 
+app.UseApplicationMiddlewares();
+
 app.UseAuthorization();
 
 app.MapControllers();

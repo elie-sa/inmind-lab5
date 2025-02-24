@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("inmind-DDD.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2795abbfb007fc0e775eba898e233083e20fe74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e657d4904b7abe87d83b94a2ee4b975ed82661e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("inmind-DDD.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("inmind-DDD.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
