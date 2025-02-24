@@ -1,4 +1,5 @@
 using System.Reflection;
+using Hangfire;
 using inmind_DDD.API.ExceptionHandlers;
 using inmind_DDD.Application;
 using inmind_DDD.Application.Services;
@@ -20,7 +21,7 @@ builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var app = builder.Build();
-
+app.UseHangfireDashboard("/hangfire");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

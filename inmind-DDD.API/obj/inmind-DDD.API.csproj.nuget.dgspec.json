@@ -462,6 +462,9 @@
               "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj": {
                 "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj"
               },
+              "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj": {
+                "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj"
+              },
               "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj": {
                 "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj"
               }
@@ -484,6 +487,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.20.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
               "version": "[5.1.0, )"

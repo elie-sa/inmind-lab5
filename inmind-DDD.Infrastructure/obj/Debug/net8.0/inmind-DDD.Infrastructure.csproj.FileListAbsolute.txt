@@ -16,3 +16,5 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\obj\Debug\net8
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\obj\Debug\net8.0\refint\inmind-DDD.Infrastructure.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\obj\Debug\net8.0\inmind-DDD.Infrastructure.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\obj\Debug\net8.0\ref\inmind-DDD.Infrastructure.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\bin\Debug\net8.0\inmind-DDD.Contract.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\bin\Debug\net8.0\inmind-DDD.Contract.pdb

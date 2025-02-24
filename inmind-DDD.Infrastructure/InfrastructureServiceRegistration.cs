@@ -1,3 +1,6 @@
+using Hangfire;
+using Hangfire.PostgreSql;
+using inmind_DDD.Infrastructure.BackgroundJobs;
 using inmind_DDD.Infrastructure.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -46,6 +49,26 @@ public static class InfrastructureServiceRegistration
         services.AddLogging(loggingBuilder =>
         {
             loggingBuilder.AddSerilog(dispose: true);
+        });
+        
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+        // adding hangfire
+        services.AddScoped<BackgroundJobService>();
+        services.AddHangfire(x => x.UsePostgreSqlStorage(connectionString));
+        services.AddHangfireServer();
+
+        services.AddHangfireServer(options => 
+        {
+            RecurringJob.AddOrUpdate(
+                "hourly-job", 
+                () => services.BuildServiceProvider().GetRequiredService<BackgroundJobService>().HourlyTask(),
+                Cron.Hourly);
+
+            RecurringJob.AddOrUpdate(
+                "daily-job",
+                () => services.BuildServiceProvider().GetRequiredService<BackgroundJobService>().DailyTask(),
+                Cron.Daily);
         });
 
     }

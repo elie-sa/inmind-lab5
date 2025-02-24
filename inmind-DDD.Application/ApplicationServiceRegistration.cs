@@ -23,8 +23,8 @@ public static class ApplicationServiceRegistration
         services.AddAutoMapper(typeof(MappingProfile));
     }
     
-    public static IApplicationBuilder UseApplicationMiddlewares(this IApplicationBuilder app)
+    public static void UseApplicationMiddlewares(this IApplicationBuilder app)
     {
-        return app.UseMiddleware<RequestLoggingMiddleware>();
+        app.UseMiddleware<RequestLoggingMiddleware>();
     }
 }
