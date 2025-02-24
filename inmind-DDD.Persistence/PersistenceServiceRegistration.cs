@@ -1,6 +1,7 @@
 using inmind_DDD.Contracts.Interfaces;
 using inmind_DDD.Persistence.Services;
 using inmind_DDD.Persistence.Services.CourseRepository;
+using inmind_DDD.Persistence.Services.CourseRepository.LocalCachingCourseRepository;
 using inmind_DDD.Persistence.Services.StudentRepository;
 using inmind_DDD.Persistence.Services.TeacherRepository;
 using inmind_DDD.Persistence.Services.TimeSlotRepository;
@@ -27,6 +28,9 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IStudentRepository, StudentRepository>();
         services.AddScoped<ITeacherRepository, TeacherRepository>();
         services.AddScoped<ITimeSlotRepository, TimeSlotRepository>();
+        
+        // adding local caching service
+        services.AddScoped<ILocalCachingCourseRepository, LocalCachingCourseRepository>();
     }
 
 }

@@ -31,5 +31,8 @@ public static class InfrastructureServiceRegistration
             // lets us see the available api versions
             options.ReportApiVersions = true;
         });
+        
+        //adding local caching
+        services.AddMemoryCache();
     }
 }

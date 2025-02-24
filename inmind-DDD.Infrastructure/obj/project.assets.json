@@ -1028,6 +1028,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.1.0",
+      "Microsoft.Extensions.Caching.Memory >= 9.0.2",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 9.0.2",
       "StackExchange.Redis.Extensions.AspNetCore >= 11.0.0",
       "inmind-DDD.Common >= 1.0.0",
@@ -1094,6 +1095,10 @@
           "Microsoft.AspNetCore.Mvc.Versioning": {
             "target": "Package",
             "version": "[5.1.0, )"
+          },
+          "Microsoft.Extensions.Caching.Memory": {
+            "target": "Package",
+            "version": "[9.0.2, )"
           },
           "Microsoft.Extensions.Caching.StackExchangeRedis": {
             "target": "Package",
