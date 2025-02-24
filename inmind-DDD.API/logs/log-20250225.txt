@@ -1053,3 +1053,54 @@ System.ArgumentOutOfRangeException: Max students must be greater than zero. (Par
 [2025-02-25 01:31:30 Information] Server e212:19096:0c00bd04 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
 [2025-02-25 01:31:30 Information] Server e212:19096:560c6373 all the dispatchers started
 [2025-02-25 01:31:30 Information] Server e212:19096:0c00bd04 all the dispatchers started
+[2025-02-25 01:32:25 Warning] Failed to determine the https port for redirect.
+[2025-02-25 01:32:25 Information] Incoming request: "GET" "/" from "::1"
+[2025-02-25 01:32:25 Information] Outgoing response: 404 for "GET" "/" in 9ms
+[2025-02-25 01:32:39 Information] Incoming request: "GET" "/students" from "::1"
+[2025-02-25 01:32:40 Information] Outgoing response: 200 for "GET" "/students" in 1249ms
+[2025-02-25 01:32:49 Information] Incoming request: "GET" "/students" from "::1"
+[2025-02-25 01:32:49 Information] Outgoing response: 200 for "GET" "/students" in 21ms
+[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 caught stopping signal...
+[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 caught stopping signal...
+[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 All dispatchers stopped
+[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 All dispatchers stopped
+[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 successfully reported itself as stopped in 9.1546 ms
+[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 successfully reported itself as stopped in 9.8744 ms
+[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 has been stopped in total 50.4693 ms
+[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 has been stopped in total 52.7899 ms
+[2025-02-25 01:54:24 Information] Start installing Hangfire SQL objects...
+[2025-02-25 01:54:24 Information] Hangfire SQL objects installed.
+[2025-02-25 01:54:25 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 01:54:25 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 01:54:25 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 01:54:25 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 01:54:25 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 01:54:25 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 01:54:25 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 01:54:25 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 01:54:25 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 01:54:25 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 01:54:25 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 01:54:25 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 successfully announced in 25.6491 ms
+[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 successfully announced in 27.5325 ms
+[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 all the dispatchers started
+[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 all the dispatchers started
+[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 caught stopping signal...
+[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 caught stopping signal...
+[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 All dispatchers stopped
+[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 All dispatchers stopped
+[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 successfully reported itself as stopped in 8.3426 ms
+[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 successfully reported itself as stopped in 9.85 ms
+[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 has been stopped in total 20.9031 ms
+[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 has been stopped in total 18.2703 ms

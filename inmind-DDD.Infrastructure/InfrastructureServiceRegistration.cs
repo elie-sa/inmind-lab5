@@ -1,6 +1,7 @@
 using Hangfire;
 using Hangfire.PostgreSql;
 using inmind_DDD.Infrastructure.BackgroundJobs;
+using inmind_DDD.Infrastructure.Emailing;
 using inmind_DDD.Infrastructure.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -71,5 +72,8 @@ public static class InfrastructureServiceRegistration
                 Cron.Daily);
         });
 
+        // adding email settings and email service
+        services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        services.AddSingleton<EmailService>();
     }
 }
