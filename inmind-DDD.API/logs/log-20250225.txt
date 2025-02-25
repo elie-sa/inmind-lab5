@@ -1,956 +1,38 @@
-[2025-02-25 00:21:35 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:21:36 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:21:36 Error] An unhandled exception has occurred while executing the request.
+[2025-02-25 21:26:36 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:26:36 Information] Hangfire SQL objects installed.
+[2025-02-25 21:26:36 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:26:36 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:26:36 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:26:36 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:26:36 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:26:36 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:26:36 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:26:36 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:26:36 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:26:36 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:26:36 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:26:36 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc successfully announced in 21.8399 ms
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 successfully announced in 27.0874 ms
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 all the dispatchers started
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc all the dispatchers started
+[2025-02-25 21:26:41 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:26:41 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
+[2025-02-25 21:26:42 Error] An unhandled exception has occurred while executing the request.
 System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
    at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
    at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:21:36 Error] An unhandled exception has occurred while executing the request.
-System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
- ---> System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   --- End of inner exception stack trace ---
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:24:50 Fatal] Application startup exception
-System.InvalidOperationException: Cannot resolve scoped service 'System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Diagnostics.IExceptionHandler]' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.<>c__DisplayClass5_0.<SetExceptionHandlerMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-[2025-02-25 00:24:50 Error] Hosting failed to start
-System.InvalidOperationException: Cannot resolve scoped service 'System.Collections.Generic.IEnumerable`1[Microsoft.AspNetCore.Diagnostics.IExceptionHandler]' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.<>c__DisplayClass5_0.<SetExceptionHandlerMiddleware>b__0(RequestDelegate next)
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
-   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
-   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
-   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
-[2025-02-25 00:28:06 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:28:06 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:28:07 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:28:07 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 24
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:28:07 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:33:20 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:33:20 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:33:20 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:33:20 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 24
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:33:20 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:39:48 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:39:49 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:39:49 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:39:49 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 24
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:39:49 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:39:52 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:39:52 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:39:52 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 24
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:39:52 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:41:18 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:41:18 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:41:19 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:41:19 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 24
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:41:19 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:44:27 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:44:27 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:44:27 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:44:27 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 26
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:44:27 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:47:38 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:47:38 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:47:38 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:47:38 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:47:38 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:47:38 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:47:38 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:47:38 Error] Connection id ""0HNAL4KUDSFH9"", Request id ""0HNAL4KUDSFH9:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:47:45 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:47:45 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:47:45 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:47:45 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:47:45 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:47:45 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:47:45 Error] Connection id ""0HNAL4KUDSFHA"", Request id ""0HNAL4KUDSFHA:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:49:39 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:49:39 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:49:40 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:49:40 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:49:40 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:49:40 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:49:40 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:49:40 Error] Connection id ""0HNAL4M2LNPUD"", Request id ""0HNAL4M2LNPUD:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:49:42 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:49:42 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:49:42 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:49:42 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:49:42 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:49:42 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:49:42 Error] Connection id ""0HNAL4M2LNPUE"", Request id ""0HNAL4M2LNPUE:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:50:19 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:50:19 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:50:19 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:50:19 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:50:19 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:50:19 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:50:19 Error] Connection id ""0HNAL4M2LNPUF"", Request id ""0HNAL4M2LNPUF:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:53:23 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:53:23 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:53:23 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 00:53:23 Error] Error occurred while handling the exception.
-System.InvalidOperationException: Cannot resolve scoped service 'inmind_DDD.Application.Localizer.ISharedLocalizer' from root provider.
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnResolve(ServiceCallSite callSite, IServiceScope scope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 28
-[2025-02-25 00:53:23 Error] An exception was thrown attempting to execute the error handler.
-System.InvalidOperationException: Headers are read-only, response has already started.
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
-   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
-   at inmind_DDD.API.ExceptionHandlers.GlobalExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\ExceptionHandlers\GlobalExceptionHandler.cs:line 25
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-[2025-02-25 00:53:23 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-[2025-02-25 00:53:23 Warning] The response has already started, the error page middleware will not be executed.
-[2025-02-25 00:53:23 Error] Connection id ""0HNAL4O57S453"", Request id ""0HNAL4O57S453:00000001"": An unhandled exception was thrown by the application.
-System.ArgumentException: MaxStudents (Parameter 'Max students must be greater than zero.')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-[2025-02-25 00:56:16 Warning] Failed to determine the https port for redirect.
-[2025-02-25 00:56:16 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 00:56:17 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
+   at lambda_method22(Closure, Object)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
@@ -964,143 +46,127 @@ System.ArgumentOutOfRangeException: Max students must be greater than zero. (Par
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 01:06:00 Warning] Failed to determine the https port for redirect.
-[2025-02-25 01:06:00 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
-[2025-02-25 01:06:00 Error] An unhandled exception has occurred while executing the request.
-System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
-   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
-   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
-   at lambda_method5(Closure, Object)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
-   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
-[2025-02-25 01:28:04 Information] Start installing Hangfire SQL objects...
-[2025-02-25 01:28:04 Information] Hangfire SQL objects installed.
-[2025-02-25 01:29:23 Information] Start installing Hangfire SQL objects...
-[2025-02-25 01:29:23 Information] Hangfire SQL objects installed.
-[2025-02-25 01:29:24 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:29:24 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:29:24 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:29:24 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:29:24 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:29:24 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 caught stopping signal...
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc caught stopping signal...
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 All dispatchers stopped
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc All dispatchers stopped
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc successfully reported itself as stopped in 40.5802 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 successfully reported itself as stopped in 42.0221 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc has been stopped in total 55.4474 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 has been stopped in total 61.6297 ms
+[2025-02-25 21:30:19 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:30:19 Information] Hangfire SQL objects installed.
+[2025-02-25 21:30:19 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:30:19 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:30:20 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:30:20 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:30:20 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:30:20 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:29:24 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:29:24 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:29:24 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:29:24 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:29:24 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:29:24 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:30:20 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:30:20 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:30:20 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:30:20 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:30:20 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:30:20 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:29:24 Information] Server e212:19960:c8f9af06 successfully announced in 26.3526 ms
-[2025-02-25 01:29:24 Information] Server e212:19960:0bd4accf successfully announced in 25.348 ms
-[2025-02-25 01:29:24 Information] Server e212:19960:c8f9af06 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:29:24 Information] Server e212:19960:0bd4accf is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:29:24 Information] Server e212:19960:c8f9af06 all the dispatchers started
-[2025-02-25 01:29:24 Information] Server e212:19960:0bd4accf all the dispatchers started
-[2025-02-25 01:29:58 Warning] Failed to determine the https port for redirect.
-[2025-02-25 01:29:58 Information] Incoming request: "GET" "/hangfire" from "::1"
-[2025-02-25 01:29:58 Information] Outgoing response: 404 for "GET" "/hangfire" in 19ms
-[2025-02-25 01:31:23 Information] Server e212:19960:c8f9af06 caught stopping signal...
-[2025-02-25 01:31:23 Information] Server e212:19960:0bd4accf caught stopping signal...
-[2025-02-25 01:31:23 Information] Server e212:19960:0bd4accf All dispatchers stopped
-[2025-02-25 01:31:23 Information] Server e212:19960:c8f9af06 All dispatchers stopped
-[2025-02-25 01:31:23 Information] Server e212:19960:c8f9af06 successfully reported itself as stopped in 6.5421 ms
-[2025-02-25 01:31:23 Information] Server e212:19960:0bd4accf successfully reported itself as stopped in 9.001 ms
-[2025-02-25 01:31:23 Information] Server e212:19960:c8f9af06 has been stopped in total 28.1915 ms
-[2025-02-25 01:31:23 Information] Server e212:19960:0bd4accf has been stopped in total 29.4306 ms
-[2025-02-25 01:31:29 Information] Start installing Hangfire SQL objects...
-[2025-02-25 01:31:29 Information] Hangfire SQL objects installed.
-[2025-02-25 01:31:30 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:31:30 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:31:30 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:31:30 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:31:30 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:31:30 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 successfully announced in 61.996 ms
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 successfully announced in 62.2324 ms
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 all the dispatchers started
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 all the dispatchers started
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 caught stopping signal...
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 caught stopping signal...
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 All dispatchers stopped
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 All dispatchers stopped
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 successfully reported itself as stopped in 41.5398 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 has been stopped in total 51.4736 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 successfully reported itself as stopped in 43.9488 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 has been stopped in total 60.874 ms
+[2025-02-25 21:35:13 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:35:13 Information] Hangfire SQL objects installed.
+[2025-02-25 21:35:14 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:35:14 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:35:14 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:35:14 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:35:14 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:35:14 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:31:30 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:31:30 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:31:30 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:31:30 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:31:30 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:31:30 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:35:14 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:35:14 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:35:14 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:35:14 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:35:14 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:35:14 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:31:30 Information] Server e212:19096:0c00bd04 successfully announced in 23.5785 ms
-[2025-02-25 01:31:30 Information] Server e212:19096:560c6373 successfully announced in 22.9799 ms
-[2025-02-25 01:31:30 Information] Server e212:19096:560c6373 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:31:30 Information] Server e212:19096:0c00bd04 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:31:30 Information] Server e212:19096:560c6373 all the dispatchers started
-[2025-02-25 01:31:30 Information] Server e212:19096:0c00bd04 all the dispatchers started
-[2025-02-25 01:32:25 Warning] Failed to determine the https port for redirect.
-[2025-02-25 01:32:25 Information] Incoming request: "GET" "/" from "::1"
-[2025-02-25 01:32:25 Information] Outgoing response: 404 for "GET" "/" in 9ms
-[2025-02-25 01:32:39 Information] Incoming request: "GET" "/students" from "::1"
-[2025-02-25 01:32:40 Information] Outgoing response: 200 for "GET" "/students" in 1249ms
-[2025-02-25 01:32:49 Information] Incoming request: "GET" "/students" from "::1"
-[2025-02-25 01:32:49 Information] Outgoing response: 200 for "GET" "/students" in 21ms
-[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 caught stopping signal...
-[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 caught stopping signal...
-[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 All dispatchers stopped
-[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 All dispatchers stopped
-[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 successfully reported itself as stopped in 9.1546 ms
-[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 successfully reported itself as stopped in 9.8744 ms
-[2025-02-25 01:54:13 Information] Server e212:19096:560c6373 has been stopped in total 50.4693 ms
-[2025-02-25 01:54:13 Information] Server e212:19096:0c00bd04 has been stopped in total 52.7899 ms
-[2025-02-25 01:54:24 Information] Start installing Hangfire SQL objects...
-[2025-02-25 01:54:24 Information] Hangfire SQL objects installed.
-[2025-02-25 01:54:25 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:54:25 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:54:25 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:54:25 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:54:25 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:54:25 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e successfully announced in 66.0558 ms
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 successfully announced in 62.5534 ms
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e all the dispatchers started
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 all the dispatchers started
+[2025-02-25 21:35:25 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:35:25 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:35:26 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 369ms
+[2025-02-25 21:39:03 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:39:03 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 5ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e caught stopping signal...
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 caught stopping signal...
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e All dispatchers stopped
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 All dispatchers stopped
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 successfully reported itself as stopped in 39.8697 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e successfully reported itself as stopped in 41.8598 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 has been stopped in total 50.0861 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e has been stopped in total 60.4279 ms
+[2025-02-25 21:40:48 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:40:48 Information] Hangfire SQL objects installed.
+[2025-02-25 21:40:49 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:40:49 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:40:49 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:40:49 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:40:49 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:40:49 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:54:25 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
-[2025-02-25 01:54:25 Information] Using the following options for PostgreSQL job storage:
-[2025-02-25 01:54:25 Information]     Queue poll interval: 00:00:15.
-[2025-02-25 01:54:25 Information]     Invisibility timeout: 00:30:00.
-[2025-02-25 01:54:25 Information]     Use sliding invisibility timeout: False.
-[2025-02-25 01:54:25 Information] Using the following options for Hangfire Server:
+[2025-02-25 21:40:49 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:40:49 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:40:49 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:40:49 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:40:49 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:40:49 Information] Using the following options for Hangfire Server:
     Worker count: 20
     Listening queues: 'default'
     Shutdown timeout: 00:00:15
     Schedule polling interval: 00:00:15
-[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 successfully announced in 25.6491 ms
-[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 successfully announced in 27.5325 ms
-[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
-[2025-02-25 01:54:25 Information] Server e212:12564:c6e6c511 all the dispatchers started
-[2025-02-25 01:54:25 Information] Server e212:12564:01aab334 all the dispatchers started
-[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 caught stopping signal...
-[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 caught stopping signal...
-[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 All dispatchers stopped
-[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 All dispatchers stopped
-[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 successfully reported itself as stopped in 8.3426 ms
-[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 successfully reported itself as stopped in 9.85 ms
-[2025-02-25 01:55:26 Information] Server e212:12564:c6e6c511 has been stopped in total 20.9031 ms
-[2025-02-25 01:55:26 Information] Server e212:12564:01aab334 has been stopped in total 18.2703 ms
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 successfully announced in 24.5907 ms
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc successfully announced in 22.3238 ms
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc all the dispatchers started
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 all the dispatchers started
+[2025-02-25 21:40:52 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:40:52 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:40:52 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 184ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 caught stopping signal...
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc caught stopping signal...
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 All dispatchers stopped
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc All dispatchers stopped
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc successfully reported itself as stopped in 12.6981 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc has been stopped in total 23.4974 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 successfully reported itself as stopped in 23.6914 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 has been stopped in total 49.3776 ms
