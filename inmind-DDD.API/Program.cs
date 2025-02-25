@@ -1,8 +1,10 @@
 using System.Reflection;
+using Hangfire;
+using inmind_DDD.API;
 using inmind_DDD.API.ExceptionHandlers;
 using inmind_DDD.Application;
-using inmind_DDD.Application.Services;
-using MediatR;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.OData;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,18 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<IExceptionHandler, GlobalExceptionHandler>();
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "");
+
+// adding localization
+var supportedCultures = new[] { "en", "fr" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+localizationOptions.RequestCultureProviders.Insert(0, new AcceptLanguageHeaderRequestCultureProvider());
+
 // calling the application services found on the application layer to connect to the dbcontext
 // also calling MediatR there
 builder.Services.AddApplicationServices(builder.Configuration);
@@ -20,6 +34,11 @@ builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var app = builder.Build();
+
+app.UseRequestLocalization(localizationOptions);
+
+// adding hangfire dashboard (to be able to test using /hangfire and trigger the events)
+app.UseHangfireDashboard("/hangfire");
 
 if (app.Environment.IsDevelopment())
 {
@@ -31,6 +50,8 @@ if (app.Environment.IsDevelopment())
 app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
+
+app.UseApplicationMiddlewares();
 
 app.UseAuthorization();
 

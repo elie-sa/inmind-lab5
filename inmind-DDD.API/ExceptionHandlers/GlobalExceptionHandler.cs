@@ -1,35 +1,49 @@
 using System.Net;
 using System.Text.Json;
+using inmind_DDD.API.Resources;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.Extensions.Localization;
 
 namespace inmind_DDD.API.ExceptionHandlers;
 
 public class GlobalExceptionHandler : IExceptionHandler
 {
+    private readonly IStringLocalizer<Messages> _localizer;
+
+    public GlobalExceptionHandler(IStringLocalizer<Messages> localizer)
+    {
+        _localizer = localizer;
+    }
+
     public async ValueTask<bool> TryHandleAsync(
         HttpContext httpContext,
         Exception exception,
         CancellationToken cancellationToken)
     {
-        httpContext.Response.ContentType = "application/json";
-        var response = new { message = exception.Message };
-        int statusCode;
+        string localizedMessage;
 
         switch (exception)
         {
-            case KeyNotFoundException:
-                statusCode = (int)HttpStatusCode.NotFound;
-                break;
             case ArgumentException:
-                statusCode = (int)HttpStatusCode.BadRequest;
+                localizedMessage = _localizer["BadRequestError"];
+                httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 break;
+
+            case KeyNotFoundException:
+                localizedMessage = _localizer["NotFoundError"];
+                httpContext.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                break;
+
             default:
-                statusCode = (int)HttpStatusCode.InternalServerError;
+                localizedMessage = _localizer["InternalServerError"];
+                httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 break;
         }
 
-        httpContext.Response.StatusCode = statusCode;
+        var response = new { message = localizedMessage };
+        httpContext.Response.ContentType = "application/json";
+
         await httpContext.Response.WriteAsync(JsonSerializer.Serialize(response), cancellationToken);
-        return true; 
+        return true;
     }
 }

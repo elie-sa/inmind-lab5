@@ -6,16 +6,22 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>inmind_DDD.API</RootNamespace>
     </PropertyGroup>
+    
+    <PropertyGroup>
+        <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="MediatR" Version="12.4.1" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.3.0" />
         <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.2.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.2" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
@@ -27,5 +33,32 @@
     <ItemGroup>
       <Folder Include="wwwroot\" />
     </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\Messages.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Messages.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Resources\Messages.fr.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Messages.fr.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Resources\Messages.resx" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Messages.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Messages.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Messages.fr.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Messages.fr.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    
+    
 
 </Project>

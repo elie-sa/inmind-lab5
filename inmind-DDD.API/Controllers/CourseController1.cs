@@ -36,6 +36,13 @@ public class CourseController1 : ControllerBase
         return Ok(course);
     }
     
+    [HttpGet("localCaching/{id}")]
+    public async Task<ActionResult<Course>> GetCourseByIdLocalCaching(int id)
+    {
+        var course = await _mediator.Send(new GetCourseByIdLocalCachingQuery(id));
+        return Ok(course);
+    }
+    
     [HttpPost]
     [Route("create")]
     public async Task<ActionResult<int>> CreateCourse([FromBody] CreateCourseCommand command)

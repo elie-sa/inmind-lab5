@@ -2,7 +2,11 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Persistence.runtimeconfig.json
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Persistence.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Persistence.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Common.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Contract.dll
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Domain.dll
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Common.pdb
+C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Contract.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Domain.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\inmind-DDD.Persistence.csproj.AssemblyReference.cache
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\inmind-DDD.Persistence.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,7 +20,3 @@ C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\inmind-DDD.Persistence.pdb
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\inmind-DDD.Persistence.genruntimeconfig.cache
 C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\obj\Debug\net8.0\ref\inmind-DDD.Persistence.dll
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Common.dll
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Common.pdb
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Contract.dll
-C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Persistence\bin\Debug\net8.0\inmind-DDD.Contract.pdb

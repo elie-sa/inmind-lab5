@@ -1,7 +1,14 @@
+using Hangfire;
+using Hangfire.PostgreSql;
+using inmind_DDD.Infrastructure.BackgroundJobs;
+using inmind_DDD.Infrastructure.Emailing;
+using inmind_DDD.Infrastructure.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using StackExchange.Redis;
 
 namespace inmind_DDD.Infrastructure;
@@ -31,5 +38,42 @@ public static class InfrastructureServiceRegistration
             // lets us see the available api versions
             options.ReportApiVersions = true;
         });
+        
+        //adding local caching
+        services.AddMemoryCache();
+        
+        Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(configuration)
+            .Enrich.FromLogContext()
+            .CreateLogger();
+
+        services.AddLogging(loggingBuilder =>
+        {
+            loggingBuilder.AddSerilog(dispose: true);
+        });
+        
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+        // adding hangfire
+        services.AddScoped<BackgroundJobService>();
+        services.AddHangfire(x => x.UsePostgreSqlStorage(connectionString));
+        services.AddHangfireServer();
+
+        services.AddHangfireServer(options => 
+        {
+            RecurringJob.AddOrUpdate(
+                "hourly-job", 
+                () => services.BuildServiceProvider().GetRequiredService<BackgroundJobService>().HourlyTask(),
+                Cron.Hourly);
+
+            RecurringJob.AddOrUpdate(
+                "daily-job",
+                () => services.BuildServiceProvider().GetRequiredService<BackgroundJobService>().DailyTask(),
+                Cron.Daily);
+        });
+
+        // adding email settings and email service
+        services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        services.AddSingleton<EmailService>();
     }
 }

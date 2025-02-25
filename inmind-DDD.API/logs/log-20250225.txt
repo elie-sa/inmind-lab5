@@ -1,0 +1,172 @@
+[2025-02-25 21:26:36 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:26:36 Information] Hangfire SQL objects installed.
+[2025-02-25 21:26:36 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:26:36 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:26:36 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:26:36 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:26:36 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:26:36 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:26:36 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:26:36 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:26:36 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:26:36 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:26:36 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:26:36 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc successfully announced in 21.8399 ms
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 successfully announced in 27.0874 ms
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:26:37 Information] Server e212:26452:2f0cadc7 all the dispatchers started
+[2025-02-25 21:26:37 Information] Server e212:26452:f97f5afc all the dispatchers started
+[2025-02-25 21:26:41 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:26:41 Information] Incoming request: "POST" "/api/v1/courses/create" from "::1"
+[2025-02-25 21:26:42 Error] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Max students must be greater than zero. (Parameter 'MaxStudents')
+   at inmind_DDD.Application.Features.Courses.Commands.CreateCourseCommandHandler.Handle(CreateCourseCommand request, CancellationToken cancellationToken) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Application\Features\Courses\Commands\CreateCourseCommandHandler.cs:line 23
+   at inmind_DDD.API.Controllers.CourseController1.CreateCourse(CreateCourseCommand command) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.API\Controllers\CourseController1.cs:line 50
+   at lambda_method22(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at inmind_DDD.Infrastructure.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Esawm\RiderProjects\inmind-DDD\inmind-DDD.Infrastructure\Middleware\RequestLoggingMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 caught stopping signal...
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc caught stopping signal...
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 All dispatchers stopped
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc All dispatchers stopped
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc successfully reported itself as stopped in 40.5802 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 successfully reported itself as stopped in 42.0221 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:f97f5afc has been stopped in total 55.4474 ms
+[2025-02-25 21:30:09 Information] Server e212:26452:2f0cadc7 has been stopped in total 61.6297 ms
+[2025-02-25 21:30:19 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:30:19 Information] Hangfire SQL objects installed.
+[2025-02-25 21:30:19 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:30:19 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:30:20 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:30:20 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:30:20 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:30:20 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:30:20 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:30:20 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:30:20 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:30:20 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:30:20 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:30:20 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 successfully announced in 61.996 ms
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 successfully announced in 62.2324 ms
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:30:20 Information] Server e212:19992:cba66636 all the dispatchers started
+[2025-02-25 21:30:20 Information] Server e212:19992:b9271413 all the dispatchers started
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 caught stopping signal...
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 caught stopping signal...
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 All dispatchers stopped
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 All dispatchers stopped
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 successfully reported itself as stopped in 41.5398 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:b9271413 has been stopped in total 51.4736 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 successfully reported itself as stopped in 43.9488 ms
+[2025-02-25 21:35:04 Information] Server e212:19992:cba66636 has been stopped in total 60.874 ms
+[2025-02-25 21:35:13 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:35:13 Information] Hangfire SQL objects installed.
+[2025-02-25 21:35:14 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:35:14 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:35:14 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:35:14 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:35:14 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:35:14 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:35:14 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:35:14 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:35:14 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:35:14 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:35:14 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:35:14 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e successfully announced in 66.0558 ms
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 successfully announced in 62.5534 ms
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:35:14 Information] Server e212:12748:feeb939e all the dispatchers started
+[2025-02-25 21:35:14 Information] Server e212:12748:d39478b7 all the dispatchers started
+[2025-02-25 21:35:25 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:35:25 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:35:26 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 369ms
+[2025-02-25 21:39:03 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:39:03 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 5ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e caught stopping signal...
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 caught stopping signal...
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e All dispatchers stopped
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 All dispatchers stopped
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 successfully reported itself as stopped in 39.8697 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e successfully reported itself as stopped in 41.8598 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:d39478b7 has been stopped in total 50.0861 ms
+[2025-02-25 21:40:43 Information] Server e212:12748:feeb939e has been stopped in total 60.4279 ms
+[2025-02-25 21:40:48 Information] Start installing Hangfire SQL objects...
+[2025-02-25 21:40:48 Information] Hangfire SQL objects installed.
+[2025-02-25 21:40:49 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:40:49 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:40:49 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:40:49 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:40:49 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:40:49 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:40:49 Information] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: UniDB, Schema: hangfire'
+[2025-02-25 21:40:49 Information] Using the following options for PostgreSQL job storage:
+[2025-02-25 21:40:49 Information]     Queue poll interval: 00:00:15.
+[2025-02-25 21:40:49 Information]     Invisibility timeout: 00:30:00.
+[2025-02-25 21:40:49 Information]     Use sliding invisibility timeout: False.
+[2025-02-25 21:40:49 Information] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 successfully announced in 24.5907 ms
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc successfully announced in 22.3238 ms
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-02-25 21:40:49 Information] Server e212:22384:aecee2cc all the dispatchers started
+[2025-02-25 21:40:49 Information] Server e212:22384:1bfa3c54 all the dispatchers started
+[2025-02-25 21:40:52 Warning] Failed to determine the https port for redirect.
+[2025-02-25 21:40:52 Information] Incoming request: "GET" "/api/v2/courses/all" from "::1"
+[2025-02-25 21:40:52 Information] Outgoing response: 200 for "GET" "/api/v2/courses/all" in 184ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 caught stopping signal...
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc caught stopping signal...
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 All dispatchers stopped
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc All dispatchers stopped
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc successfully reported itself as stopped in 12.6981 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:aecee2cc has been stopped in total 23.4974 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 successfully reported itself as stopped in 23.6914 ms
+[2025-02-25 21:47:11 Information] Server e212:22384:1bfa3c54 has been stopped in total 49.3776 ms

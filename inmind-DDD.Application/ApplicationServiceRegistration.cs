@@ -1,6 +1,8 @@
 using System.Reflection;
 using inmind_DDD.Infrastructure;
+using inmind_DDD.Infrastructure.Middleware;
 using inmind_DDD.Persistence;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,6 +21,10 @@ public static class ApplicationServiceRegistration
         services.AddPersistenceServices(configuration);
         
         services.AddAutoMapper(typeof(MappingProfile));
-
+    }
+    
+    public static void UseApplicationMiddlewares(this IApplicationBuilder app)
+    {
+        app.UseMiddleware<RequestLoggingMiddleware>();
     }
 }

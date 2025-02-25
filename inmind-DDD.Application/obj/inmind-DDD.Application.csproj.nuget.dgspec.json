@@ -358,6 +358,9 @@
               "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj": {
                 "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Common\\inmind-DDD.Common.csproj"
               },
+              "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj": {
+                "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Contract\\inmind-DDD.Contract.csproj"
+              },
               "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj": {
                 "projectPath": "C:\\Users\\Esawm\\RiderProjects\\inmind-DDD\\inmind-DDD.Domain\\inmind-DDD.Domain.csproj"
               }
@@ -380,13 +383,41 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.20.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
               "version": "[5.1.0, )"
             },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1-dev-02317, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.1-dev-00953, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "StackExchange.Redis.Extensions.AspNetCore": {
               "target": "Package",
